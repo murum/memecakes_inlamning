@@ -1,0 +1,1216 @@
+/*
+Theme Name: Memecakes
+Theme URL: http://memecak.es;
+Author: Angry Creative (Christoffer Rydberg)
+Author URI: http://www.angrycreative.se
+Version: 0.1
+Description: Theme for memecak.es
+*/
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,700);
+
+/* ! Font-sizes
+/* ============================== */
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Maven Pro", Arial, sans-serif;
+	font-weight: bold;
+	-ms-word-break: normal;
+	word-break: normal;
+	/* Non standard for webkit*/
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+        hyphens: auto;
+}
+h1 {
+	font-size: 2em;
+	margin: 14px 0;
+}
+
+h2 {
+	font-size: 1.8em;
+	margin: 2% 0 3%;
+}
+
+h3 {
+	font-size: 1.6em;
+	margin: 0.5em 0;
+}
+
+h4 {
+	font-size: 1.4em;
+	font-weight: 700;
+	margin: 0.5em 0;
+}
+
+p {
+	font-family: "Maven Pro", Arial, sans-serif;
+	font-size: 1em;
+	margin: 0;
+	-ms-word-break: normal;
+	word-break: normal;
+	/* Non standard for webkit*/
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+        hyphens: auto;
+
+}
+
+a {color:#fff; font-family: "Maven Pro", Arial, sans-serif;}
+a:hover {color:#ddd; text-decoration: none;}
+
+/* ! Sticky Footer
+/* ============================== */
+html, body, body.login {
+	height: 100%;
+	background: #2a2a2a;
+	color: #fff;
+	font-size: 16px;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -33px; 
+}
+#footer, .push {
+	height: 33px;
+}
+
+/* ! Header
+/* ============================== */
+
+.brand {
+	float: left;
+	font-size: 1.5em;
+}
+
+.main-nav,
+.nav-right {
+	list-style: none;
+	line-height: 44px;
+	float: left;
+	margin: 0 20px;
+}
+
+.nav-right {
+	margin: 0;
+	float: right;
+}
+
+.main-nav li,
+.nav-right li {
+	height: 44px;
+	line-height: 44px;
+	display: inline;
+	float: left;
+	padding: 0 10px;
+}
+
+.main-nav li:hover {
+	background: #0c0;
+}
+
+.main-nav li a {
+	display: block;
+}
+
+.main-nav li a:hover {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-inner {
+	background: #000;
+}
+
+.memecake-upload-menuitem {
+	background: #0c0;
+}
+
+.memecake-upload-menuitem:hover {
+	background: #0b0;
+}
+
+.memecake-upload-menuitem a {
+	display: block;
+}
+
+.memecake-upload-menuitem a:hover {
+	color: #fff;
+}
+
+.current-menu-item {
+	border-bottom: 2px solid #0c0;
+}
+
+/* ! Authentication
+/* ============================== */
+
+.login,
+.register {
+	position: relative;
+}
+
+.login-button,
+.register-button {
+	cursor:pointer;
+}
+
+#logout-submit-button,
+#config-button {
+	display: none;
+}
+
+.memecake-logout-submit {
+	color: #fff;
+	cursor: pointer;
+}
+
+.memecake-logout-submit:hover {
+	color: #ddd;
+}
+
+.login-message,
+.register-message,
+.forgot-pass-message {
+	background-color: #ff0;
+	color: #2a2a2a;
+	line-height: 1em;
+	padding: 0.6em;
+}
+
+.logout-message {
+	background-color: #ff0;
+	color: #2a2a2a;
+	position: absolute;
+	left: 42%;
+	top: 40%;
+	text-align: center;
+	padding: 0.4em;
+	display: none;
+	z-index: 50;
+}
+
+.login-box,
+.register-box,
+.forgot-pass-box {
+	text-align: left;
+	width: 300px;
+	background: #000;
+	position: absolute;
+	z-index: 50;
+	right: 0;
+	display: none;
+}
+
+.forgot-pass-text {
+	line-height: 1em;
+	padding-left: 0.8em;
+	font-weight: normal;
+}
+
+input.login-input,
+input.register-input,
+input.forgot-pass-input {
+	border: none;
+	background: #2a2a2a;
+	color: #fff;
+	width: 290px;
+	display: block;
+	padding: 10px 5px;
+	margin: 0.4em 0 0.4em 0;
+}
+
+input.register-input{
+	margin: 0;
+}
+
+input.login-submit,
+input.register-submit,
+input.forgot-pass-submit {
+	width: 300px;
+	background: #00cc00;
+	padding: 1em 5px;
+	text-align: center;
+	color: #fff;
+	margin: 0 0 0.4em 0;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+input.register-submit {
+	margin: 0;
+}
+
+input.login-remember {
+	display: inline;
+	margin: 0 4px;
+	width: auto;
+}
+
+label.login-remember-label {
+	display: inline;
+}
+
+.login-link,
+.forgot-pass-link {
+	float: right;
+	display: block;
+	padding: 0 0.4em;
+	font-size: 0.8em;
+	line-height: 1.1em;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #fff;
+}
+
+.login-link:hover,
+.forgot-pass-link:hover {
+	color: #ddd;
+}
+
+.login-link-last,
+.forgot-pass-link-last {
+	margin-bottom: 1em;
+}
+
+.register-box h3,
+.login-box h3 {
+	padding: 0 0.4em;
+	letter-spacing: -1px;
+}
+
+.register-box h4,
+.login-box h4 {
+	line-height: normal;
+	font-size: 1.2em;
+	padding: 0 0.4em;
+	letter-spacing: -1px;
+}
+
+#register-form label {
+	padding: 0 0.4em;
+}
+
+.register-username-help,
+.register-email-help {
+	line-height: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	margin: 2px 0 1em 4px;
+	padding: 0 0.4em;
+}
+
+#wp-social-login-connect-with{
+	display: none;
+}
+
+.register-box #wp-social-login-connect-options,
+.login-box #wp-social-login-connect-options {
+	padding: 0;
+}
+
+.register-box a[title='Connect with Facebook'],
+.register-box a[title='Connect with Twitter'],
+.login-box a[title='Connect with Facebook'],
+.login-box a[title='Connect with Twitter'] {
+	height: 40px;
+	width: 49.1%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	text-align: center;
+}
+
+.register-box a[title='Connect with Facebook'],
+.login-box a[title='Connect with Facebook'] {
+	background: #364c79;
+}
+
+.register-box a[title='Connect with Twitter'],
+.login-box a[title='Connect with Twitter'] {
+	background: #0c8fc1;
+}
+
+.register-box a span.icon-facebook,
+.register-box a span.icon-twitter,
+.login-box a span.icon-facebook,
+.login-box a span.icon-twitter {
+	line-height: 40px;
+}
+
+#wp-social-login-connect-options a{
+	text-decoration: none;
+}
+
+#wp-social-login-connect-options img{
+	border:0 none;
+}
+
+.memecake-auth-name {
+	text-align: right;
+}
+
+
+/* ! Footer
+/* ============================== */
+#footer {
+	height: 33px;
+	padding-top: 3px;
+	line-height: 33px;
+}
+
+/* ! Content
+/* ============================== */
+#content {
+	margin-top: 2em;
+}
+
+.white-container {
+	padding: 3%;
+	background: #000;
+	color: #fff;
+}
+
+/* ! Memecakes feed , firstpage
+/* ============================== */
+
+.memecake-image {
+	position: relative;
+}
+
+.memecake:hover .add-this-buttons {
+	display: block;
+}
+
+
+.memecake > a > img {
+	max-height: 500px;
+	min-width: 100%;
+}
+
+.memecake {
+	margin-bottom: 1em;
+	background: #000;
+	position: relative;
+}
+
+.memecake .memecake-author,
+.memecake .memecake-rating {
+	line-height: 40px;
+}
+
+.memecake .memecake-author {
+	padding-left: 0.4em;
+}
+
+.memecake .memecake-rating {
+	text-align: right;
+}
+
+/* ! Memecakes feed , all memes
+/* ============================== */
+#content .meme-memecake,
+#content .meme-text {
+	float: left;
+	background: #000;
+	width: 50%;
+	margin: 0;
+	display: block;
+	
+}
+
+.meme-text {
+	padding: 5% 4%;
+}
+
+.meme-memecake img {
+	min-width: 100%;
+}
+
+.meme-buttons {
+	width: 100%;
+	clear: both;
+}
+
+.meme-memecakes {
+	margin-top: 1.5em;
+}
+
+.meme-memecakes .meme-upload,
+.meme-memecakes .meme-upload-small,
+.meme-memecakes .meme-button-small {
+	height: 52px;
+	background: #0c0;
+	border: none;
+	font-weight: bold;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	margin: 0;
+}
+
+.meme-memecakes .meme-upload-small,
+.meme-memecakes .meme-button-small {
+	float: left;
+	background: #0c0;
+	width: 50%;
+}
+
+.meme-memecakes .meme-button-small {
+	background: #0c0;
+	line-height: 52px;
+}
+
+#content .blackback {
+	background: #000;
+}
+
+.meme-search-input,
+.sort-meme {
+	position: relative;
+	overflow: hidden;
+}
+
+.meme-search-icon,
+.meme-sort-icon {
+	position: absolute;
+	right: 0;
+	height: 42px;
+	width: 48px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 42px;
+}
+
+.meme-search-icon:hover,
+.meme-sort-icon:hover {
+	background: rgba(0,0,0,.1);
+}
+
+#search-meme,
+#sort-meme {
+	padding: 12px 4px;
+	border: 0;
+	border-radius: 1px;
+	color: #fff;
+	background: #000;
+	display: inline-block;
+}
+
+#sort-meme {
+	width: 100%;
+}
+
+/* ! Memecakes feed , meme archive
+/* ============================== */
+
+.meme-memecakes-sort {
+	position: relative;
+	overflow: hidden;
+}
+
+#sort-memecakes {
+	padding: 12px 4px;
+	line-height: 1;
+	border: 0;
+	border-radius: 1px;
+	color: #fff;
+	background: #000;
+	display: inline-block;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+/* ! Single Memecake
+/* ============================== */
+.memecake-single {
+	width: ;
+}
+.memecake-image img{
+	min-width: 100%;
+}
+
+.username-single-memecake {
+	color: #888;
+	font-size: 0.9em;
+}
+
+.memecake-comments,
+.memecake-ads {
+	margin: 20px 0;
+}
+
+.memecake-ads,
+.memecake-info {
+	width: 300px;
+	float: right;
+}
+
+.memecake-user-icon {
+	margin-right: 5px;
+}
+
+.memecake-info h2 {
+	line-height: 1.1em;
+}
+
+.memecake-share {
+	margin: 10% 0 0 0;
+}
+
+.memecake-share h4 {
+	font-size: 1.2em;
+	margin: 20px 0 0 0;
+}
+
+.memecake-share p {
+	font-size: 0.7em;
+	margin: 0;
+	line-height: 0.9;
+}
+
+.memecake-share a:hover {
+	text-decoration: none;
+}
+
+.memecake-navigation {
+	margin: 4% 0 -3% 0;
+}
+
+.memecake-navigation a{
+	font-size: 0.8em;
+	font-weight: 400;
+	color: #fff;
+}
+
+.memecake-navigation a:visited{
+	text-decoration: none;
+}
+
+.memecake-navigation a:hover{
+	text-decoration: none;
+}
+
+.memecake-ads img {
+	min-width: 100%;
+}
+
+.memecake-rating .ratingtext {
+	display: none;
+}
+
+.pending-message {
+	position: absolute;
+	left: 0;
+	z-index: 40;
+	width: 94%;
+	height: 10%;
+	padding: 3%;
+	background: rgba(50,50,50,.9);
+}
+
+.pending-message-container {
+	width: 50%;
+	margin: 10px auto;
+}
+
+/* ! Memecake upload
+/* ============================== */
+.memecake-upload-header {
+	text-shadow: 0 0 2px #fff;
+	font-size: 1.2em;
+}
+
+#memecake-upload-dropzone {
+	display: block;
+	float: left;
+	width: 100%;
+	height: 200px;
+	background-color: #000;
+	position:relative;
+}
+#memecake-upload-img-preview img {
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+
+.ajaxLoading {
+	display: none;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding-top: 10%;
+	background: #000;
+	z-index: 5;
+}
+
+.memecake-upload-dropzone-message {
+	height: 20%;
+	padding-top: 25%;
+	margin: 5% auto;
+	width: 80%;
+	background: url('./css/img/dropzone-icon.png') no-repeat center top;
+	text-align: center;
+	font-size: 2em;
+	line-height: 1.2em;
+}
+
+.memecake-upload-browse-image {
+	display: none;
+}
+
+.memecake-upload-browse-image-text,
+.memecake-upload-browse-image-button {
+	position: absolute;
+	bottom: -60px;
+	height: 50px;
+	text-align: center;
+	padding: 2%;
+	font-size: 1.4em;
+}
+
+.memecake-upload-browse-image-text {
+	width: 36%;
+	background: #000;
+	line-height: 50px;
+}
+
+.memecake-upload-browse-image-button {
+	width: 56%;
+	background: #00cc00;
+	right: 0;
+	line-height: 25px;
+	cursor: pointer;
+}
+
+.memecake-upload-browse-image {
+	height: 0;
+	width: 0;
+	overflow:hidden;
+}
+
+#memecake-upload-fields {
+	float: left;
+	margin-top: 73px;
+	min-width: 98%;
+}
+
+.memecake-title-counter,
+.memecake-description-counter {
+	font-size: 0.8em;
+	display: none;
+}
+
+#memecake-title,
+#memecake-description {
+	padding: 8px 1%;
+	margin-top: 1em;
+	background: #000;
+	border: none;
+	color: #fff;
+	display: inline-block;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+#memecake-description {
+	min-height: 150px;
+	max-height: 150px;
+	resize: none;
+}
+
+#memecake-submit {
+	margin-top: 10px;
+}
+
+.memecake-upload-submit-button,
+#memecake-submit {
+	padding: 1em 4px;
+	border: none;
+	display: inline-block;
+	min-width: 100%;
+	max-width: 100%;
+	background: #00cc00;
+	color: #fff;
+	font-size: 2em;
+	text-align: center;
+	cursor: pointer;
+}
+
+#memecake-upload-meme-search-form input{
+	padding: 8px 4px;
+	background: #000;
+	border: none;
+	color: #fff;
+	position: absolute;
+}
+
+#memecake-upload-meme-search-form {
+	position: relative;
+	margin: 14px 0;
+	width: 50%;
+	display: block;
+}
+
+#memecake-upload-meme-search-form input#meme{
+	position: absolute;
+	left: 0;
+	width: 80%;
+}
+
+#memecake-upload-meme-search-form input#meme:focus {
+	outline: none;
+}
+#memecake-upload-meme-search-form .memecake-upload-search-meme-loader {
+	position: absolute;
+	right: 20%;
+	line-height: 34px;
+	display: none;	
+}
+
+.memecake-meme img {
+	min-height: 64px;
+	max-height: 64px;
+}
+
+.memecake-meme-choosed,
+.memecake-meme-not-choosed {
+	margin: 60px 0;
+}
+
+.memecake-choosen-meme-is {
+	float: left;
+	line-height: 64px;
+	font-size: 0.8em;
+}
+
+.memecake-upload-meme-img img {
+	cursor: pointer;
+	max-width: 18%;
+	float: left;
+	margin: 1%;
+
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+.memecake-upload-meme-img img:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.memecake-choosen-meme img {
+	max-width: 18%;
+	min-height: 64px;
+	max-height: 64px;
+	float: left;
+	margin: 1%;
+}
+
+.memecake-choosen-meme-text {
+	font-weight: bold;
+	float: left;
+	font-size: 1.1em;
+	line-height: 64px;
+}
+
+.memecake-meme-remove {
+	cursor: pointer;
+	float: left;
+	line-height: 64px;
+	margin-left: 0.5em;
+}
+
+.memecake-meme-remove:hover:before {
+	content: "\f057";
+	text-decoration: none;
+	color: red;
+}
+
+.memecake-choosen-meme-back:before {
+	margin-right: 5px;
+}
+
+.memecake-choosen-meme-back {
+	display: block;
+	float: left;
+	margin-top: 0.3em;
+	width: 100%;
+	cursor: pointer;
+}
+
+.memecake-choosen-meme-back:hover {
+	color: #ddd;
+}
+
+.memecake-upload-errors {
+	background: #ff0;
+	padding: 2%;
+	color: #000;
+	list-style: none;
+	float: left;
+}
+
+/* ! Profile page
+/* ============================== */
+
+.memecake-profile {
+	background: #000;
+}
+
+.memecake-profile-names h5 {
+	margin: -1em 0 1em;
+}
+
+.memecake-detailed-information dt{
+	color: #0c0;
+	display: inline-block;
+	width: 5%;
+
+	margin: 3px 3%;
+	padding: 0;
+}
+
+.memecake-detailed-information dd{
+	display: inline-block;
+	width: 80%;
+
+	margin: 3px 0;
+	padding: 0;
+}
+
+.memecake-no-uploaded-blackbox {
+	background: #000;
+	display: block;
+	margin: 0;
+}
+
+.memecake-no-uploaded-blackbox .memecake-no-uploaded-blackbox-text{
+	margin: 0;
+	font-size: 4em;
+	font-weight: 600;
+	line-height: 0.8em;
+	padding: 0.2em 0 0.4em 0;
+}
+
+.memecake-no-uploaded-button {
+	display: block;
+	margin: 0;
+	text-align: center;
+	background: #0c0;
+}
+
+.memecake-no-uploaded-button:hover {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.icon-8x {
+	font-size: 8em;
+}
+
+.memecake-no-uploaded-button-text {
+	font-family: "Maven Pro", Arial, sans-serif;
+	margin: 0;
+	margin-top: -0.2em;
+	padding: 0 0 0.3em 0;
+	font-size: 0.6em;
+	display: block;
+	font-weight: 600;
+}
+
+.memecake-no-uploaded-no-user-text {
+	background: #000;
+	font-size: 2.8em;
+	font-weight: 600;
+	line-height: 1em;
+	padding: 0.3em;
+}
+
+.memecake-no-uploaded-no-user-text p{
+	margin: 0;
+}
+
+.memecake-odd {
+	margin-left: 0;
+}
+
+.author-avatar-info {
+	text-align: center;
+}
+
+/* ! Edit Profile page
+/* ============================== */
+
+#edit-profile-form {
+	background: #000;
+	padding: 2em;
+}
+
+#edit-profile-form h2 {
+	margin: 0;
+
+}
+
+#edit-profile-form input,
+#edit-profile-form textarea {
+	background: #2a2a2a;
+	border: none;
+	color: #fff;
+	padding: 3%;
+}
+
+#edit-profile-form textarea {
+	min-height: 110px;
+	resize: none;
+}
+
+#edit-profile-form input[type="checkbox"] {
+	width: auto;
+}
+
+#edit-profile-form input[type="submit"] {
+	background: #0c0;
+	font-size: 1.8em;
+	font-weight: 700;
+	padding: 1.95%;
+}
+
+.memecake-edit-profile-success,
+.memecake-edit-profile-errors {
+	background: #ff0;
+	padding: 2%;
+	color: #000;
+	list-style: none;
+}
+
+.new-edit-profile-section {
+	margin: 0 0 5% 0;
+}
+
+.whisper {
+	font-size: 0.7em;
+	color: #bbb;
+	margin: 0;
+}
+
+/* ! Helpclasses & IDs
+/* ============================== */
+.alignright {
+	text-align: right;
+}
+
+input, textarea {
+	font-family: "Maven Pro";
+}
+
+.hidden {
+	display: none;
+}
+
+.green {
+	color: #00cc00;
+}
+
+.text {
+	font-family: "Maven Pro", Arial, sans-serif;
+}
+
+.less-bottom-margin {
+	margin-bottom: -3%;
+}
+
+#content .no-margin-left {
+	margin-left: 0;
+}
+
+.small {
+	font-size: 0.7em;
+}
+
+.margins {
+	margin: 1em 0 !important;
+}
+
+
+/* ! SHARE BUTTONS
+/* ============================== */
+
+.sharebuttons {
+	background: #000;
+	margin-top: -4px;
+	height: 28px;
+	width: 33px;
+	display: block;
+	text-align: center;
+	padding-top: 6px;
+}
+
+.sharebuttons:hover {
+	text-decoration: none;
+	background: #0c0;
+	opacity: 100;
+}
+
+.memecake-sharebuttons {
+	position: absolute;
+	display: none;
+	bottom: 0;
+	right: 0;
+	width: 33px;
+	height: 130px;
+}
+
+.memecake:hover .memecake-sharebuttons {
+	display: block;
+}
+
+
+/* ! SHARE BUTTONS SINGLE MEMECAKE
+/* ============================== */
+.add-this-buttons-single-memecake {
+	display: block;
+}
+.sharebuttons-single-memecake {
+	background: #000;
+	margin-top: -4px;
+	height: 34px;
+	width: 33px;
+}
+.addthis_floating_style-single-memecake {
+	display: block;
+	width: 128px;
+}
+.addthis_internal_container-single-memecake {
+	width: 128px;
+}
+.addthis_32x32_style-single-memecake {
+	background: transparent;
+	border-radius: 0;	
+	text-decoration: none;
+	width: 100%;
+	padding: 0;
+}
+.addthis_32x32_style-single-memecake a {
+	text-decoration: none;
+}
+.add-this-buttons-single-memecake:hover {
+	color: #2a2a2a;
+}
+
+.sortDropdown { 
+	display: block;
+	margin: 0;
+	background: #000;
+	line-height: 42px;
+	font-family: "Maven Pro", sans-serif;
+}
+
+.customSelectInner {
+	display: block;
+	padding-left: 4px;
+	background: url('./css/img/dropdown_arrow.png') no-repeat center right;
+	font-family: "Maven Pro", sans-serif;
+}
+
+
+/* ! FOOTER
+/* ============================== */
+
+.footer {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+
+
+
+/* ! RESPONSIVE
+/* ============================== */
+
+@media (min-width: 1200px) {
+	.memecake-single {
+		width: 840px !important;
+	}
+
+	.memecake-single-info {
+		width: 300px !important;
+	}
+}
+
+@media (min-width: 980px ) and (max-width: 1199px) {
+	.memecake-single {
+		width: 610px !important;
+	}
+
+	.memecake-single-info {
+		width: 300px !important;
+		float: right;
+	}
+}
+
+@media (min-width: 768px ) and (max-width: 979px) {
+	.memecake-single {
+		width: 390px !important;
+	}
+
+	.memecake-single-info {
+		width: 300px !important;
+		float: right;
+	}
+}
+
+@media (max-width: 979px) {
+
+	.main-nav,
+	.nav-right {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+
+	.memecake-auth-name {
+		text-align: left;
+	}
+
+	.memecake-config-menuitem {
+		line-height: 44px;
+	}
+
+	.main-nav li,
+	.nav-right li {
+		border-top: 1px solid #fff;
+		display: block;
+		width: 100%;
+		height: 44px;
+		line-height: 44px;
+	}
+
+	.main-nav li a,
+	.nav-right li a {
+		display: block;
+	}
+
+}

@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:900);
+
+.logotype {
+	max-width: 150%;
+}
+
+.ohno {
+	font-size: 6em;
+	color: #f00;
+	font-weight: 900;
+	padding: 0.3em 0;
+	margin: 0;
+}
+
+
+.errormessage {
+	font-size: 1.6em;
+	line-height: 1.2em;
+	background: #000;	
+	
+}
+
+.black {
+	background: #000;
+}
+
+.grey {
+	background: #2a2a2a;
+	width: 100%;
+}
+
+.errormargin {
+	margin: 30px 0;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.underline:hover {
+	color: #ddd;
+}
+

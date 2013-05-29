@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Nexa Bold';
+    src: url('./fonts/Nexa_Free_Bold-webfont.eot');
+    src: url('./fonts/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('./fonts/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('./fonts/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body.login {
+	height: 100%;
+	background: url('./img/irongrip.png');
+	font: 15px/20px 'Nexa Bold','Helvetica Neue', 'Helvetica', Arial, sans-serif;
+}
+body.login div#login {}
+body.login div#login h1 {}
+
+body.login div#login h1 a {
+	background-image:url('../images/logo_white.png') !important;
+	background-size: 300px 60px;
+}
+body.login div#login form#loginform,
+body.login div#login form#registerform {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	color: #fff;
+}
+
+body.login div#login form#loginform p {
+}
+
+body.login div#login form#loginform p label {
+	font: 15px/20px 'Nexa Bold','Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	color: #fff;
+}
+
+body.login div#login form#loginform input {
+	
+}
+
+body.login div#login form#loginform input#user_login {
+	font: bold 19px 'Nexa Bold','Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	padding: 8px 4px;
+}
+
+body.login div#login form#loginform input#user_pass {
+	font: bold 19px 'Nexa Bold','Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	padding: 8px 4px;	
+}
+
+body.login div#login form#loginform p.forgetmenot {
+	
+}
+
+body.login div#login form#loginform p.forgetmenot input#rememberme {
+	
+}
+
+body.login div#login form#loginform p.submit {
+	
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+	
+}
+
+body.login div#login #wp-social-login-connect-with {
+	color: #fff !important;
+}
+
+body.login div#login p#nav {
+	color: #fff !important;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+body.login div#login p#nav a {
+	color: #fff !important;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+body.login div#login p#nav a:hover {
+	color: #ccc !important;
+	text-decoration: underline;
+}
+
+body.login div#login p#backtoblog {
+	color: #fff !important;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+body.login div#login p#backtoblog a {
+	color: #fff !important;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+body.login div#login p#backtoblog a:hover {
+	color: #ccc !important;
+	text-decoration: underline;
+}
+
+body.login div#login .wp-social-login-connect-options {
+	
+}
