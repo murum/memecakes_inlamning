@@ -168,7 +168,7 @@
                         </div>
                         <div class="span6">
                             <label class="span12" for="lastname">Last name</label>
-                            <input class="span12 no-margin-left" id="lastname" name="profile-lastname" value="<?php echo $curauth->last_name; ?>" />
+                            <input class="span12 no-margin-left" type="text" id="lastname" name="profile-lastname" value="<?php echo $curauth->last_name; ?>" />
                         </div>
                     </div>
                     <div class="row-fluid">

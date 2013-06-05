@@ -30,6 +30,8 @@ foreach($memecakes as $memecake) {
 		$memecake_link = get_permalink($memecake->ID);
 		$memecake_title = get_the_title($memecake->ID);
 		$rating = do_shortcode('[ratings id='.$memecake->ID.']');
+
+		// The template of the single memecake.
 		$meme = 
 		"<div class='memecake'>
 			<a href='$memecake_link'>

@@ -43,64 +43,7 @@ class WPSEO_Taxonomy {
 	function form_row( $var, $label, $desc, $tax_meta, $type = 'text', $options = array() ) {
 		$val = '';
 		if ( isset( $tax_meta[$var] ) && !empty( $tax_meta[$var] ) )
-			$val = stripslashes( $tax_meta[$var] );
-
-		echo '<tr class="form-field">' . "\n";
-		echo "\t" . '<th scope="row" valign="top"><label for="' . $var . '">' . $label . ':</label></th>' . "\n";
-		echo "\t" . '<td>' . "\n";
-		if ( $type == 'text' ) {
-			?>
-        <input name="<?php echo $var; ?>" id="<?php echo $var; ?>" type="text" value="<?php echo $val; ?>" size="40"/>
-        <p class="description"><?php echo $desc; ?></p>
-		<?php
-		} else if ( $type == 'checkbox' ) {
-			?>
-        <input name="<?php echo $var; ?>" id="<?php echo $var; ?>" type="checkbox" <?php checked( $val ); ?>/>
-		<?php
-		} else if ( $type == 'select' ) {
-			?>
-        <select name="<?php echo $var; ?>" id="<?php echo $var; ?>">
-			<?php foreach ( $options as $option => $label ) {
-			$sel = '';
-			if ( $option == $val )
-				$sel = " selected='selected'";
-			echo "<option" . $sel . " value='" . $option . "'>" . $label . "</option>";
-		}?>
-        </select>
-		<?php
-		}
-		echo "\t" . '</td>' . "\n";
-		echo '</tr>' . "\n";
-
-	}
-
-	/**
-	 * Show the SEO inputs for term.
-	 *
-	 * @param object $term Term to show the edit boxes for.
-	 */
-	function term_seo_form( $term ) {
-		$tax_meta = get_option( 'wpseo_taxonomy_meta' );
-		$options  = get_wpseo_options();
-
-		if ( isset( $tax_meta[$term->taxonomy][$term->term_id] ) )
-			$tax_meta = $tax_meta[$term->taxonomy][$term->term_id];
-
-		echo '<h2>' . __( 'Yoast WordPress SEO Settings', 'wordpress-seo' ) . '</h2>';
-		echo '<table class="form-table">';
-
-		$this->form_row( 'wpseo_title', __( 'SEO Title', 'wordpress-seo' ), __( 'The SEO title is used on the archive page for this term.', 'wordpress-seo' ), $tax_meta );
-		$this->form_row( 'wpseo_desc', __( 'SEO Description', 'wordpress-seo' ), __( 'The SEO description is used for the meta description on the archive page for this term.', 'wordpress-seo' ), $tax_meta );
-		if ( isset( $options['usemetakeywords'] ) && $options['usemetakeywords'] )
-			$this->form_row( 'wpseo_metakey', __( 'Meta Keywords', 'wordpress-seo' ), __( 'Meta keywords used on the archive page for this term.', 'wordpress-seo' ), $tax_meta );
-		$this->form_row( 'wpseo_canonical', __( 'Canonical', 'wordpress-seo' ), __( 'The canonical link is shown on the archive page for this term.', 'wordpress-seo' ), $tax_meta );
-		$this->form_row( 'wpseo_bctitle', __( 'Breadcrumbs Title', 'wordpress-seo' ), sprintf( __( 'The Breadcrumbs title is used in the breadcrumbs where this %s appears.', 'wordpress-seo' ), $term->taxonomy ), $tax_meta );
-
-		if ( isset( $tax_meta['wpseo_noindex'] ) && $tax_meta['wpseo_noindex'] == 'on' )
-			$tax_meta['wpseo_noindex'] = 'noindex';
-		$current         = ( isset( $options['noindex-' . $term->taxonomy] ) && $options['noindex-' . $term->taxonomy] ) ? 'noindex' : 'index';
-		$noindex_options = array(
-			'default' => sprintf( __( 'Use %s default (Currently: %s)', 'wordpress-seo' ), $term->taxonomy, $current ),
+			$val = sxonomy, $current ),
 			'index'   => __( 'Always index', 'wordpress-seo' ),
 			'noindex' => __( 'Always noindex', 'wordpress-seo' ) );
 		$this->form_row( 'wpseo_noindex', sprintf( __( 'Noindex this %s', 'wordpress-seo' ), $term->taxonomy ), sprintf( __( 'This %s follows the indexation rules set under Metas and Titles, you can override it here.', 'wordpress-seo' ), $term->taxonomy ), $tax_meta, 'select', $noindex_options );

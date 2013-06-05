@@ -20,6 +20,8 @@
 		$home_url = home_url();
 		$memecake_link = get_permalink($memecake->ID);
 		$rating = do_shortcode('[ratings id='.$memecake->ID.']');
+
+		// The template of the single memecake.
 		$meme = "
 			<div class='memecake'>
 				<a href='$memecake_link'>

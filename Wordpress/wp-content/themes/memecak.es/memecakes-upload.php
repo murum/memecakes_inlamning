@@ -6,6 +6,9 @@
 <?php if(is_user_logged_in()) : ?>
 <?php
 	$errors = array();
+	/*
+	 * Take care of the Ajax Request happening when a user search in the select meme part.
+	 */
 	if(isset($_POST['meme']) && !isset($_POST['upload']) && !isset($_POST['memecake-upload-form-submit'])) {
 		$memes = get_terms("meme", array('search' => $_POST['meme'], 'hide_empty' => false));
 		echo '<div class="span6 memecake-upload-meme-memeimgs">';
@@ -21,9 +24,17 @@
 		}
 		echo '</div>';
 		die();
-	} else if (isset($_POST['memes-meme'])) {
+	} 
+	/**
+	 * If the meme was set and a upload error appeared
+	 **/
+	else if (isset($_POST['memes-meme'])) {
 		$memecake_meme = $_POST['memes-meme'] != null ? $_POST['memes-meme'] : null;
-	} else if(isset($_POST['upload'])) {
+	} 
+	/**
+	 * Takeing care of the image uploader ajax post.
+	 **/
+	else if(isset($_POST['upload'])) {
 		
 		if ( ! function_exists( 'wp_handle_upload' ) ) require_once( ABSPATH . 'wp-admin/includes/file.php' );
 		$uploadedfile = $_FILES['memecake-img'];
@@ -53,7 +64,12 @@
 		    echo "Possible file upload attack!\n";
 		    die();
 		}
-	} else if (isset($_POST['memecake-upload-form-submit'])) {
+	} 
+	/**
+	 * If a the uploadbutton got clicked.
+	 * A memecake is getting uploaded if no errors appears.
+	 **/
+	else if (isset($_POST['memecake-upload-form-submit'])) {
 		$memecake_title = $_POST['memecake-title'] != null ? esc_html($_POST['memecake-title']) : null;
 		$memecake_description = $_POST['memecake-description'] != null ? esc_html($_POST['memecake-description']) : null;
 		$memecake_attachment_id = $_POST['memecake-attach-id'] != null ? esc_html($_POST['memecake-attach-id']) : null;
@@ -97,17 +113,18 @@
 				'post_author'	=> $current_user->ID,
 				'post_content' 	=> $memecake_description
 			);
-
 			$post_id = wp_insert_post($new_memecake_post);
 
 			update_post_meta( $post_id,'_thumbnail_id',$memecake_attachment_id);
 
+			// Adds the meme category to the memecake
 			$meme_to_add = get_term((int)$memecake_meme, 'meme');
 			if(term_exists($meme_to_add->name, 'meme')) {
 				wp_set_post_terms( $post_id, $meme_to_add->term_id, 'meme', false);
 			} else {
 				$errors[] = "The meme you choosed doesn't exist";
 			}
+
 			wp_safe_redirect( get_permalink( $post_id ) );
 		}
 	}
@@ -201,6 +218,7 @@
 		</div>
 	<?php get_footer(); ?>
 <?php else : ?>
+	<?php // If the user aint logged in; ?>
 	<?php get_header(); ?>
 		<?php include('templates/not-logged-in.php'); ?>
 	<?php get_footer(); ?>
