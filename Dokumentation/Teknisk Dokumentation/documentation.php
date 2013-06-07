@@ -18,6 +18,7 @@
 		</div>
 		<div class="content">
 			<h2>Dokumentation för <a target="_blank" href="http://memecak.es">memecak.es</a></h2>
+			<h3>Wordpress temat</h3>
 			<ul class="documentation-files">
 				<li><a href="pages/404.php">404.php</a></li>
 				<li><a href="pages/archive.php">archive.php</a>
@@ -38,6 +39,12 @@
 				<li><a href="pages/single-memecake.php">single-memecake.php</a></li>
 				<li><a href="pages/style.php">style.css</a></li>
 				<li><a href="pages/taxonomy-meme.php">taxonomy-meme.php</a></li>
+			</ul>
+			<h3>Wordpress temats javascript</h3>
+			<ul>
+				<li><a href="pages/js/upload.php">js/upload.js</a></li>
+				<li><a href="pages/js/auth.php">js/auth.js</a></li>
+				<li><a href="pages/js/all_sites.php">js/all_sites.js</a></li>
 			</ul>
 		</div>
 		<div class="sidebar"><?php include('includes/sidebar.php'); ?></div>
